@@ -1,0 +1,15 @@
+[{
+	  "sigla": "Sp",
+      "nome": "São Paulo",
+      "bairros": [
+		"Cidade AE Carvalho",
+		"Ermelino Matarazzo",
+		"Itaim Paulista",
+		"Itaquera",
+		"Jardim dos Ipês",
+		"Jardim Helena",
+        "Sâo Miguel Paulista",
+        "Vila Mara"   
+      ]
+
+}]

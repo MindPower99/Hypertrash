@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			 <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf8">
+			 <link rel="stylesheet" href="./js/jquerymobile/jquery.mobile-1.4.5.min.css">
+			 <link rel="stylesheet" href="_css/style.css">
+			 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+			 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+			 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		</head>
+	<body>
+                      <!------------------------------------ PAGE DE LOGIN ------------------------------------------->
+			<div data-role="page" data-theme="a" id="login">
+					<div  data-role="header" data-theme="a" data-position="fixed">
+							  <div class="statusbar-overlay"></div>
+							  <!-- Panels overlay-->
+							  <div class="panel-overlay"></div>
+							  <h1>Login de usuário</h1>
+					</div>	
+					<div data-role="main" class="ui-content" >
+					<center>  <img class="logo" alt="mee" src="img/logo.png"/> </center> 
+						       <div data-role="form" class="form" >
+									<form>
+										<Label for="emailuser"> <b> Email:</b><br>
+										<input type="text" placeholder="Digite seu login" name="emailuser" id="emailuser" required>
+										<br>
+										<Label for="senhauser"> <b> Senha:</b><br>
+										<input type="password" placeholder="Digite sua senha" name="senhauser" id="senhauser" required>
+										<br>
+										<input id="btnEntrar" type="button" value="Entrar" class="shadowLogin" data-wrapper-class="ui-custom">
+										<input id="btnCadastro"type="button"  value="Fazer Cadastro" onclick="window.location='#cadastrogeral'">
+										<input id="btnlogarcoop" type="button" value="Entrar como Cooperativa" onclick="window.location='#logincoop'">
+									</form> 
+								</div>
+								<!-- login como barbeiro -->
+								<!-- <a href="#popuplogin" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-user" data-transition="pop">Entrar como cooperativa</a>
+								<div data-role="popup" id="popuplogin" data-theme="a" class="ui-corner-all">
+								    <form>
+								        <div style="padding:10px 20px;">
+								            <center><img class="logo" alt="mee" src="img/logo.png"/></center>  
+											<hr>
+											<center> <h3>Entrar como cooperativa</h3> </center> 
+											<hr>
+								            <label for="un" class="ui-hidden-accessible">Email:</label>
+								            <input type="text" name="user" id="emailcoop" value="" placeholder="Email:" data-theme="a">
+								            <label for="senhacoop" class="ui-hidden-accessible">Senha:</label>
+								            <input type="password" name="senhacoop" id="senhacoop" value="" placeholder="Senha:" data-theme="a">
+								            <input id="btnEntrarcoop" type="button" value="Entrar" class="shadowLogin" data-wrapper-class="ui-custom">
+								        </div>
+								    </form>
+								</div> -->
+					</div>		
+					
+				<div data-role="footer" class="footer" data-theme="a" data-position="fixed">
+					
+					<center> <h3> Hypertrash </h3> </center>
+					
+				</div> 
+			</div>
+			<!------------------------------------Página de login da cooperativa ------------------------------------------------------------------->
+			
+			
+			<div data-role="page" data-theme="a" id="logincoop">
+					<div  data-role="header" data-theme="a" data-position="fixed">
+							  <div class="statusbar-overlay"></div>
+							  <!-- Panels overlay-->
+							  <div class="panel-overlay"></div>
+							  <h1>Login/Cooperativa</h1>
+					</div>	
+					<div data-role="main" class="ui-content" >
+								<center>  <img class="logo" alt="mee" src="img/logo.png"/> </center> 
+						       <div data-role="form" class="form" >
+							   
+									<form>
+									
+										<Label for="emailcoop"> <b> Email:</b><br>
+										<input type="text" placeholder="Digite seu login" name="emailcoop" id="emailcoop" required>
+										<br>
+										<Label for="senhacoop"> <b> Senha:</b><br>
+										<input type="password" placeholder="Digite sua senha" name="senhacoop" id="senhacoop" required>
+										
+										<br>
+										
+										<input id="btnEntrarcoop" type="button" value="Entrar" class="shadowLogin" data-wrapper-class="ui-custom">
+										<input id="btnvoltar" type="button" value="Voltar" class="shadowLogin" onclick="window.location='#login'" data-wrapper-class="ui-custom" >
+										
+									</form>
+									
+								</div>
+								
+						</div>
+						
+							<div data-role="footer" class="footer" data-theme="a" data-position="fixed">
+					
+								<center> <h3> Hypertrash </h3> </center>
+					
+							</div> 
+							
+			</div>
+							
+										
+										
+			<!------------------------------------ PAGE ESCOLHA DE CADASTRO ------------------------------------------->
+			<div data-role="page" data-theme="a" id="cadastrogeral">
+					<div  data-role="header" data-theme="a"  data-position="fixed">
+						  <h1>Hypertrash</h1>
+						  <a onclick="window.location='index.html'" class="previous">&laquo; </a>
+					</div>	
+					<div data-role="main" class="ui-content" >
+					    <img class="logo" alt="mee" src="img/logo.png"/>   
+					        <br>  
+						    <div data-role="form" class="form" >
+								<input type="submit" value="Cadastro para usuários comuns" onclick="window.location='#cadastrousuario'">
+								<input type="submit" value="Cadastro para cooperativas de lixo" onclick="window.location='#cadastrocoop'">  
+							</div>
+					</div>
+				<div data-role="footer" class="footer" data-theme="a" data-position="fixed">
+					
+					<center>  <h3> Hypertrash </h3>  </center>
+					
+				</div> 
+	        </div>
+					  <!--------------------------------------- PAGE CADASTRO DE usuario --------------------------------------------->	
+			<div data-role="page" data-theme="a" id="cadastrousuario">
+				<div  data-role="header" data-theme="a" data-position="fixed">
+					  <h1>Hypertrash</h1>
+					  <a onclick="window.location='#cadastrogeral'" class="previous">&laquo; </a>
+					 <!-- <a onclick="window.location='1.html'"  class="next"> &raquo;</a> -->
+				</div>		
+				<div data-role="main" class="ui-content" >			
+						 <img class="logo" alt="mee" src="img/logo.png"/>   	
+						 
+							<center>
+										   <br><br><hr>
+								<label for="salvarnome"><b>Nome:</b></label>
+								<input type="text"  id="salvarnome" placeholder="Nome" data-wrapper-class="ui-custom">
+								
+								<label for="salvaremail"><b>Email:</b></label>
+								<input type="email" id="salvaremail" placeholder="E-mail" data-wrapper-class="ui-custom">
+								
+								<label for="salvartelefone"><b>Telefone:</b></label>
+								<input type="text" id="salvartelefone" placeholder="Telefone" data-wrapper-class="ui-custom">
+								
+								<form>
+								
+										<label for="estados"><b>Selecione seu Estado:</b></label>
+											<select id="estados">
+												<option value=""></option>
+											</select>
+										
+										<label for="cidades"><b>Selecione Sua Cidade:</b></label>
+											<select id="cidades">
+												<option value=""></option>
+											</select>
+											
+										<label for="bairros"><b>Selecione Seu Bairro:</b></label>
+											<select id="bairros">
+											</select>
+	
+								</form>
+								<label for="salvarrua"><b>Rua:</b></label>
+								<input type="text" id="salvarrua" placeholder="Digite o nome da sua rua" data-wrapper-class="ui-custom">
+								
+								<label for="salvarnum"><b>Número da casa:</b></label>
+								<input type="text" id="salvarnum" placeholder="Digite o número da sua casa" data-wrapper-class="ui-custom">
+					
+								<script type="text/javascript">
+																		$.getJSON('estados_cidades.json', function (data) {
+												var items = [];
+												var options = '<option value="">Selecione seu Estado</option>';	
+												$.each(data, function (key, val) {
+													options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+												});					
+												$("#estados").html(options);				
+												
+												$("#estados").change(function () {				
+												
+													var options_cidades = '';
+													var str = "";					
+													
+													$("#estados option:selected").each(function () {
+														str += $(this).text();
+													});
+													
+													$.each(data, function (key, val) {
+														if(val.nome == str) {							
+															$.each(val.cidades, function (key_city, val_city) {
+																options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+															});							
+														}
+													});
+													$("#cidades").html(options_cidades);
+													
+												}).change();
+											
+											});
+										
+									</script>
+									
+									<script type="text/javascript">
+									$.getJSON('cidades_bairros.json', function (data) {
+												var items = [];
+												var options = '<option value="">escolha uma cidade</option>';	
+												$.each(data, function (key, val) {
+													options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+												});					
+												$("#cidades").html(options);				
+												
+												$("#cidades").change(function () {				
+												
+													var options_bairros = '';
+													var str = "";					
+													
+													$("#cidades option:selected").each(function () {
+														str += $(this).text();
+													});
+													
+													$.each(data, function (key, val) {
+														if(val.nome == str) {							
+															$.each(val.bairros, function (key_bairro, val_bairro) {
+																options_bairros += '<option value="' + val_bairro + '">' + val_bairro + '</option>';
+															});							
+														}
+													});
+													$("#bairros").html(options_bairros);
+													
+												}).change();
+											
+											});
+									</script>
+								
+					
+								<label for="salvarsenha"><b>Senha:</b></label>
+								<input type="password" id="salvarsenha" placeholder="Senha" data-wrapper-class="ui-custom">
+								
+								<label for="salvarsenharpt"><b>Confirmar Senha:</b></label>
+								<input type="password" id="salvarsenharpt" placeholder="Confirmar senha" data-wrapper-class="ui-custom">
+								
+								<br><br>
+								<input id="btnCadastrarusuario" type="button" value="Cadastrar usuário" data-wrapper-class="ui-custom">
+								<hr>
+								<input id="btnVoltar" type="button"  value="Voltar" onclick="window.location='#cadastrogeral'" ">
+								
+							</center>
+							
+						<div data-role="footer" class="footer" data-theme="a" data-position="fixed"-->
+						
+								<h3>Hypertrash</h3>
+								
+						</div> 
+				</div>
+			</div>	
+			<!--------------------------------------- PAGE CADASTRO DE Cooperativa --------------------------------------------->	
+			<div data-role="page" data-theme="a" id="cadastrocoop">
+				<div  data-role="header" data-theme="a" data-position="fixed">
+				
+					  <h3> Hypertrash </h3>
+					  
+					  <a onclick="window.location='#cadastrogeral'" class="previous">&laquo; </a>
+					  
+				</div>		
+				<div data-role="main" class="ui-content" >			
+						 <img class="logo" alt="mee" src="img/logo.png"/>   								 								 
+						    
+							<center>
+										   <br><br><hr>
+								<label for="salvarnomecoop"><b>Nome:</b></label>
+								<input type="text"  id="salvarnomecoop" placeholder="Nome" data-wrapper-class="ui-custom">
+								
+								<label for="salvaremailcoop"><b>Email:</b></label>
+								<input type="email" id="salvaremailcoop" placeholder="E-mail" data-wrapper-class="ui-custom">
+								
+								<label for="salvartelefonecoop"><b>Telefone:</b></label>
+								<input type="text" id="salvartelefonecoop" placeholder="Telefone" data-wrapper-class="ui-custom">
+								
+								<label for="salvarcnpj"><b>CNPJ:</b></label>
+								<input type="text" id="salvarcnpj" placeholder="CNPJ" data-wrapper-class="ui-custom">
+								
+								<form>
+								
+										<label for="estadoscoop"><b>Selecione seu Estado:</b></label>
+											<select id="estadoscoop">
+												<option value=""></option>
+											</select>
+										
+										<label for="cidadescoop"><b>Selecione Sua Cidade:</b></label>
+											<select id="cidadescoop">
+												<option value=""></option>
+											</select>
+											
+										<label for="bairroscoop"><b>Selecione Seu Bairro:</b></label>
+											<select id="bairroscoop">
+											</select>
+											
+								</form>
+								
+								<label for="salvarruacoop"><b>Rua:</b></label>
+								<input type="text" id="salvarruacoop" placeholder="Digite o nome da sua rua" data-wrapper-class="ui-custom">
+								
+								<label for="salvarnum"><b>Número da casa:</b></label>
+								<input type="text" id="salvarnumcoop" placeholder="Digite o número da sua casa" data-wrapper-class="ui-custom">
+								
+									<script type="text/javascript">
+																		$.getJSON('estados_cidades.json', function (data) {
+												var items = [];
+												var options = '<option value="">Selecione seu Estado</option>';	
+												$.each(data, function (key, val) {
+													options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+												});					
+												$("#estadoscoop").html(options);				
+												
+												$("#estadoscoop").change(function () {				
+												
+													var options_cidades = '';
+													var str = "";					
+													
+													$("#estadoscoop option:selected").each(function () {
+														str += $(this).text();
+													});
+													
+													$.each(data, function (key, val) {
+														if(val.nome == str) {							
+															$.each(val.cidades, function (key_city, val_city) {
+																options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+															});							
+														}
+													});
+													$("#cidadescoop").html(options_cidades);
+													
+												}).change();
+											
+											});
+										
+									</script>
+									
+									<script type="text/javascript">
+									$.getJSON('cidades_bairros.json', function (data) {
+												var items = [];
+												var options = '<option value="">escolha uma cidade</option>';	
+												$.each(data, function (key, val) {
+													options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+												});					
+												$("#cidadescoop").html(options);				
+												
+												$("#cidadescoop").change(function () {				
+												
+													var options_bairros = '';
+													var str = "";					
+													
+													$("#cidadescoop option:selected").each(function () {
+														str += $(this).text();
+													});
+													
+													$.each(data, function (key, val) {
+														if(val.nome == str) {							
+															$.each(val.bairros, function (key_bairro, val_bairro) {
+																options_bairros += '<option value="' + val_bairro + '">' + val_bairro + '</option>';
+															});							
+														}
+													});
+													$("#bairroscoop").html(options_bairros);
+													
+												}).change();
+											
+											});
+									</script>
+									
+							
+								
+								<label for="salvarsenhacoop"><b>Senha:</b></label>
+								<input type="password" id="salvarsenhacoop" placeholder="Senha" data-wrapper-class="ui-custom">
+								
+								<label for="salvarsenharptcoop"><b>Confirmar Senha:</b></label>
+								<input type="password" id="salvarsenharptcoop" placeholder="Confirmar senha" data-wrapper-class="ui-custom">
+								
+								<br><br>
+								<input id="btnCadastrarcoop" type="button" value="Cadastrar cooperativa" data-wrapper-class="ui-custom">
+								<hr>
+								<input type="button"  value="Voltar" onclick="window.location='#cadastrogeral'" id="btnVoltar">
+							</center>
+							
+						<div data-role="footer" class="footer" data-theme="a" data-position="fixed"-->
+						
+								<h3>Hypertrash</h3>
+								
+						</div> 
+				</div>
+			</div>	
+					<!--------------------------------------- PAGE PERFIL usuario --------------------------------------------->
+			<div data-role="page" id="profile" data-title="profile" data-theme="a" data-position="fixed">
+				<div data-role="header" data-theme="a">
+					<h1>Meu Perfil</h1>
+					<a data-role="button"  onclick="window.location='#paginausuario'" data-icon="home" data-corners="false"> Início </a>
+				</div>
+				<div data-role="content">
+									<!-- profile image -->
+									<center> <img id="imgTestClick" src="img/perfil.png" alt="mee" /> </center>
+									<!-- my profile -->
+									
+					<div data-role="collapsible-set">
+							<div data-role="collapsible" data-corners="false" class="ui-corner-none" data-collapsed="false">
+								<h2 class="ui-collapsible-heading"><a class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-d" href="#" data-corners="false" data-shadow="false" data-iconshadow="true" data-icon="plus" data-iconpos="left" data-theme="a">
+									<span class="ui-btn-text">Perfil Pessoal</span>
+								</a></h2>
+								<div class="ui-body ui-body-d ui-textalign-left">
+									<!-- profile fields -->
+									<div class="tablerow">
+										<div class="left-table">Nome:</div>
+										<div id="divAppendNome" class="right-table"></div>
+									</div>								   
+									<div class="tablerow">
+										<div class="left-table">Email:</div>
+										<div id="divAppendEmail" class="right-table"></div>
+									</div>
+									<div class="tablerow">
+										<div class="left-table">Telefone:</div>
+										<div id="divAppendTel" class="right-table"></div>
+									</div>
+								</div>
+								
+									<div id="PUsername">
+									</div>
+							</div>
+							
+						<div data-role="footer" class="footer" data-theme="a" data-position="fixed">
+						
+							<h3>Hypertrash</h3>
+							
+						</div>
+					</div>
+				</div>			
+			</div>		
+					<!------------------------------------ PAGE da cooperativa------------------------------------------->
+			<div data-role="page" id="profilebar" data-title="profile" data-theme="a" data-position="fixed">
+				<div data-role="header" data-theme="a">
+					<h1>Meu Perfil</h1>
+					<a data-role="button"  onclick="window.location='#paginacoop'" data-icon="home" data-corners="false">Home</a>
+				</div>
+				<div data-role="content">
+									<!-- profile image -->
+									<center><img id="imgTestClick" src="img/perfil.png" alt="mee" /></center>
+									<!-- my profile -->
+					<div data-role="collapsible-set">
+							<div data-role="collapsible" data-corners="false" class="ui-corner-none" data-collapsed="false">
+								<h2 class="ui-collapsible-heading"><a class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-d" href="#" data-corners="false" data-shadow="false" data-iconshadow="true" data-icon="plus" data-iconpos="left" data-theme="a">
+									<span class="ui-btn-text">Perfil Pessoal</span>
+								</a></h2>
+								<div class="ui-body ui-body-d ui-textalign-left">
+									<!-- profile fields -->
+									<div class="tablerow">
+										<div class="left-table">Nome:</div>
+										<div id="divAppendNomecoop" class="right-table"></div>
+									</div>								   
+									<div class="tablerow">
+										<div class="left-table">Email:</div>
+										<div id="divAppendEmailcoop" class="right-table"></div>
+									</div>
+									<div class="tablerow">
+										<div class="left-table">Telefone:</div>
+										<div id="divAppendTelcoop" class="right-table"></div>
+									</div>
+								</div>
+								
+									<div id="PUsername">
+									</div>
+							</div>
+							
+						<div data-role="footer" class="footer" data-theme="a" data-position="fixed">
+						
+							<h3>Hypertrash</h3>
+							
+						</div>
+					</div>
+				</div>			
+			</div>				
+					<!------------------------------------ PAGE usuario LOGADO ------------------------------------------->	
+			<div data-role="page" data-theme="a" id="paginausuario">
+				<div  data-role="header" data-theme="a" data-position="fixed">
+					 <h1>Hypertrash</h1>
+					 <a href="#add-form" data-icon="bars" data-iconpos="notext">Menu</a>
+				</div>	
+				<div data-role="panel" data-position="left" data-position-fixed="true" data-display="reveal" data-theme="a" id="add-form" >
+				<a href="#profile"  class="ui-btn ui-icon-user ui-btn-icon-top">Meu Perfil</a>
+				    <ul data-role="listview">
+			               <!-- <li><a href="#panel-fixed-page2">Configurações</a></li> -->
+							<li><a href="#login" onclick="sair()">Sair</a></li>
+			        </ul>
+    			</div><!-- /panel -->
+				<div role="main" class="ui-content jqm-content jqm-fullwidth" >
+				<h3 class="ui-bar ui-bar-a" data-theme="a"> cooperativas cadastradas </h3>
+				
+				<div class="ui-body ui-body-d ui-textalign-left" id="MOSTRAR">
+									
+				</div>
+				</div>
+			</div>
+					<!------------------------------------ PAGE coop ------------------------------------------->
+			<div data-role="page" data-theme="a" id="paginacoop">
+				<div  data-role="header" data-theme="a" data-position="fixed">
+					 <h1>Hypertrash</h1>
+					 <a href="#add-form" data-icon="bars" data-iconpos="notext">Menu</a>
+				</div>	
+				<div data-role="panel" data-position="left" data-position-fixed="true" data-display="reveal" data-theme="a" id="add-form" >
+				<a href="#profilebar"  class="ui-btn ui-icon-user ui-btn-icon-top">Meu Perfil</a>
+				    <ul data-role="listview">
+			               <!-- <li><a href="#panel-fixed-page2">Configurações</a></li> -->
+							<li><a onclick="sair()">Sair</a></li>
+			        </ul>
+    			</div><!-- /panel -->
+				<center><h3 class="ui-bar ui-bar-a">Serviços Solicitados</h3></center>
+				
+				<div role="main" class="ui-content jqm-content jqm-fullwidth" >
+				
+				<div class="ui-body ui-body-d ui-textalign-left" id="MOSTRARAGEND">
+				
+				</div>
+				</div>
+			</div>
+				<!------------------------------------ PAGE AGENDAR ------------------------------------------->
+			<div data-role="page" id="Agendar" data-theme="a">
+			  <div  data-role="header" data-theme="a" data-position="fixed">
+					  <h1>Hypertrash</h1>
+					  <a onclick="window.location='#paginausuario'" class="previous">&laquo; </a>
+					 <!-- <a onclick="window.location='1.html'"  class="next"> &raquo;</a> -->
+				</div>		
+			    <form>
+			        <div style="padding:10px 20px;">
+						
+			            <center><img class="logo" alt="mee" src="img/Logo.png"/></center>  
+						<hr>
+						<center> <h3>Solicite aqui o serviço de coleta:</h3> </center> 
+						<hr>
+						
+						<label><b> Nome </b></label>
+			            <input type="text" id="AgndNome" value="" placeholder="Nome de quem vai solicitar o serviço" data-theme="a">
+			
+						<label><b> Endereço </b></label>
+			            <input type="text" id="AgndEndereco" value="" placeholder="Endereço:" data-theme="a">
+			
+						<label><b> Telefone </b></label>
+			            <input type="text" id="AgndTelefone" value="" placeholder="Telefone:" data-theme="a">
+			
+						<label for="datetime"><b>Data/Horário do Serviço</b></label>
+						<input type="text" id="AgndData" value="" placeholder="Ex: Seg as 12:12:" data-theme="a">
+						
+						
+			
+					   <!-- <select name="select-native-3" id="AgndLocal" data-iconpos="left" data-theme="a">
+					        <option value="Salao">Residência</option>
+					        <option value="Domicilio">Apartamento</option>
+					    </select> -->
+
+						
+			            <input id="BtnAgendar" type="button" onclick="window.location='#login'" value="Confirmar solicitação" class="shadowLogin" data-wrapper-class="ui-custom">
+			        </div>
+			    </form>
+			</div>
+			
+			
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="scripts/index1.js"></script>
+  
+	</body>
+</html>
+
